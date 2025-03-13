@@ -7,7 +7,7 @@ that information to a webhook.
 
 ```bash
 MC_HOSTNAME=12.456.789.123 \
-MC_PORT=24352 \
+MC_PORT=12345 \
 WEBHOOK_URL='https://discord.com/api/webhooks/ID/SECRET' \
 CHECK_INTERVAL=10 \     # seconds
 mc_player_count_notifier

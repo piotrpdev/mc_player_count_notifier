@@ -1,0 +1,22 @@
+# Put me in /lib/systemd/system/
+[Unit]
+Description=Periodically check if player list for Minecraft server has changed and send that information to a webhook.
+After=network-online.target
+Wants=network-online.target
+
+StartLimitIntervalSec=500
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=piotrpdev
+WorkingDirectory=/home/piotrpdev/
+ExecStart=/usr/local/bin/mc_player_count_notifier
+Restart=on-failure
+RestartSec=5s
+Environment="MC_HOSTNAME=12.456.789.123"
+Environment="MC_PORT=12345"
+Environment=WEBHOOK_URL='https://discord.com/api/webhooks/ID/SECRET'
+
+[Install]
+WantedBy=multi-user.target
