@@ -1,6 +1,6 @@
 # Put me in /lib/systemd/system/
 [Unit]
-Description=Periodically check if player list for Minecraft server has changed and send that information to a webhook.
+Description=Periodically check if the player list for a Minecraft server has changed and send that information to a webhook.
 After=network-online.target
 Wants=network-online.target
 

@@ -1,7 +1,7 @@
 # MC Player Count Notifier
 
-Periodically check if player list for Minecraft server has changed and send
-that information to a webhook.
+Periodically check if the player list for a Minecraft server has changed and
+send that information to a webhook.
 
 ## Usage
 
